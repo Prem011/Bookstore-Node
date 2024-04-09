@@ -1,0 +1,688 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Lato');
+:root{
+    --primaryred:#ff424f;
+    --secondaryred:#f84735;
+    --lightblack:#222b31;
+    --darkblack:#191c1f;
+    --mainfont:'Dancing Script', cursive;
+    --secondfont: 'Lato', sans-serif;
+}
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+	line-height: 1.5;
+	font-family:var(--secondfont);
+}
+
+*,*:before,*:after{
+	box-sizing: border-box;
+}
+img{
+	max-width: 100%;
+	height: auto;
+}
+.fullcontent{
+    width:100%;
+    min-height: 100vh;
+    height: auto;
+    padding:6% 10% 5% 10%;
+    background-image: url(img/b.jpg);
+    background:linear-gradient(rgba(0, 0, 0, 0.70), rgba(0, 0, 0, 0.70)),url(https://raw.githubusercontent.com/Poojavpatel/BookStoreApp/master/img/b.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    display: flex;
+    flex-direction: row;
+}
+.headings{
+     /* background:red;  */
+    flex-basis: 65%;
+    margin-right: 5%;
+}
+.headings h1{
+    font-size: 4rem;
+    font-family:var(--mainfont);
+    color:white;
+    margin:3% 0% 3% 0%;
+}
+.headings h2{
+	font-size:1.2rem;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.5);
+}
+.formbox{
+    background:rgb(34,43,49,0.7);
+    color:white;
+    flex-basis: 35%;
+    border-top: 10px solid var(--secondaryred);
+    padding:2% 3%;
+}
+.formbox *{
+    margin: 0;
+}
+.formbox h3{
+    font-family: var(--mainfont);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.formbox form label{
+    color: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 0.3rem;
+}
+.formbox form .asd{
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: none;
+    background: transparent;
+    height: 2.8rem;
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+form .mainbox{
+    color: white;
+    box-shadow: none;
+    background: var(--secondaryred);
+    height: 2.8rem;
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+}
+a .mainbox{
+    margin: 0;
+    padding: 2%;
+}
+ /* -----------------------------------------------------------------------------------------------------------------library-------------------------- */
+ html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* ---------------------------------------------------------- Main css -------------------------------------------------------------*/
+body{
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+}
+/* ------------------------------------------------- for mobiles -------------------------------------------------------------------- */
+@media(max-width: 900px){
+    /* ---------------------------------- NAV BAR ---------------------------- */
+    .nav-bar{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .nav1{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .icon-about{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 0.5em;
+        padding: 1em;
+    }
+    .nav1 a{
+        margin-top: 0.5em;
+        padding: 1em;
+        border-bottom: 1px solid #adb5bd;
+        color: #adb5bd;
+        font-size: 1em;
+        text-decoration: none;
+        transform: translateY(103px);
+    }
+    .nav1 input{
+        margin-top: 0.5em;
+        border: none;
+        border-bottom: 1px solid #adb5bd;
+        padding: 0.8em 1em;
+        font-size: 1em;
+    }
+    .nav1 input::placeholder{
+        font-family: 'Roboto', sans-serif;
+        color: #adb5bd;
+        font-size: 1em;
+    }
+    input:focus, textarea:focus, select:focus{
+        outline: none;
+    }
+    .nav-bar h3{
+        margin-top: 0.5em;
+        /* border-bottom: 1px solid #adb5bd; */
+        padding: 0.8em 1em;
+        font-size: 1em;
+        font-weight: bold;
+        transform: translateY(-103px);
+    }
+    .material-icons-outlined{
+        color: #adb5bd;
+        size: 2px;
+        margin-right: 1em;
+    
+    }
+    .icon-about a{
+        text-decoration: none;
+        color: #adb5bd;
+        font-size: 1em;
+        padding-left: 1em;
+    }
+
+    /* ------------------------- main book store ---------------------------- */
+    main{
+        margin-top: 1em;
+        font-family: 'Noto Sans JP', sans-serif;
+    }
+    .books{
+        display: flex;
+        flex-direction: row;
+        background-color: #cbb5e2;
+        border-radius: 10px;
+        margin-bottom: 3em;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    }
+    .books:nth-of-type(2){
+        background-color: #fbadaf;
+    }
+    .books:nth-of-type(3){
+        background-color: #a4e0eb;
+    }
+    .books:nth-of-type(4){
+        background-color: #fdca95;
+    }
+    .book-img{
+        width: 100%;
+        max-width: 1000px;
+        margin: 1.5em;
+        border-radius: 3px;
+        transition: transform 1s;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+    .book-img:hover{
+        transform: scale(1.05);
+    }
+    .descp{
+        margin: 1.5em;
+        padding: 1em;
+        
+    }
+    .book-name{
+        font-weight: bold;
+        padding-bottom: 0.5em;
+        font-size: 1.1em;
+        letter-spacing: 1px;
+        color: white;
+    }
+    .author{
+        padding-bottom: 0.5em;
+        font-size: 1.1em;
+        letter-spacing: 1px;
+        color: white;
+    }
+    .rating{
+        padding-bottom: 1.2em;
+        font-size: 1em;
+        letter-spacing: 1px;
+        color: white;
+    }
+    .info{
+        font-size: 1em;
+        letter-spacing: 1px;
+        color: white;
+    }
+    .descp button{
+        margin-top: 1em;
+        background: none;
+        border: none;
+        color: #cbb5e2;
+        background-color: white;
+        padding: 0.6em 1.5em;
+        font-size: 1em;
+        border-radius: 20px;
+        font-weight: bolder;
+    }
+    .descp button:hover{
+        color: #a790f2;
+    }
+    #b1{
+        color: #fbadaf;
+    }
+    #b1:hover{
+        color: #ff6e9f;
+    }
+    #b2{
+        color: #a4e0eb;
+    }
+    #b2:hover{
+        color: #62cdec;
+    }
+    #b3{
+        color: #fdca95;
+    }
+    #b3:hover{
+        color: #fb9124;
+    }
+
+}
+
+
+
+
+
+
+/*--------------------------------------------------------------- fOR PC AND LAPTOPS -------------------------------------------- */
+@media(min-width: 900px){
+    /* ----------------------------------------------------- Navbar ---------------------------------------------------------- */
+    .nav-bar{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .nav1{
+        display: flex;
+        flex-direction: row;
+        margin-left: 1em;
+        margin-bottom: 1em;
+        margin-top: 1em;
+    }
+    .nav1 a{
+        padding: 1em;
+        border: none;
+        border-right: 1px solid #adb5bd;
+        color: #adb5bd;
+        font-size: 1em;
+        text-decoration: none;
+    }
+    .nav1 input{
+        border: none;
+        margin-left: 0.5em;
+        padding: 0.8em 1em;
+        font-size: 1em;
+    }
+    .nav1 input::placeholder{
+        font-family: 'Roboto', sans-serif;
+        color: #adb5bd;
+        font-size: 1em;
+    }
+    input:focus, textarea:focus, select:focus{
+        outline: none;
+    }
+    .nav-bar h3{
+        padding: 0.8em 1em;
+        margin-left: 1em;
+        margin-bottom: 1em;
+        margin-top: 1em;
+        font-size: 1em;
+        font-weight: bold;
+    }
+    .icon-about{
+        display: flex;
+        align-items: center;
+    }
+    .material-icons-outlined{
+        color: #adb5bd;
+        size: 2px;
+        margin-right: 1em;
+    
+    }
+    .icon-about a{
+        margin-right: 2em;
+        text-decoration: none;
+        color: #adb5bd;
+        font-size: 1em;
+        border-left: 1px solid #adb5bd;
+        padding-left: 1em;
+    }
+
+    /* ------------------- MAIN BOOKS ---------------------------------- */
+    main{
+        margin-top: 1em;
+        font-family: 'Noto Sans JP', sans-serif;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .books{
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        max-width: 600px;
+        justify-content: space-evenly;
+        background-color: #cbb5e2;
+        border-radius: 10px;
+        margin-bottom: 3em;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+    }
+    .books:nth-of-type(2){
+        background-color: #fbadaf;
+    }
+    .books:nth-of-type(3){
+        background-color: #a4e0eb;
+    }
+    .books:nth-of-type(4){
+        background-color: #fdca95;
+    }
+    .book-img{
+        width: 100%;
+        max-width: 500px;
+        border-radius: 3px;
+        transition: transform 1s;
+        margin: 1.5em;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+    .book-img:hover{
+        transform: scale(1.05);
+    }
+    .descp{
+        margin: 1.5em;
+        padding: 1em;
+        
+    }
+    .book-name{
+        font-weight: bold;
+        padding-bottom: 0.5em;
+        font-size: 1.1em;
+        letter-spacing: 1px;
+        color: white;
+    }
+    .author{
+        padding-bottom: 0.5em;
+        font-size: 1.1em;
+        letter-spacing: 1px;
+        color: white;
+    }
+    .rating{
+        padding-bottom: 1.2em;
+        font-size: 1em;
+        letter-spacing: 1px;
+        color: white;
+    }
+    .info{
+        font-size: 1em;
+        letter-spacing: 1px;
+        color: white;
+    }
+    .descp button{
+        margin-top: 1em;
+        background: none;
+        border: none;
+        color: #cbb5e2;
+        background-color: white;
+        padding: 0.6em 1.5em;
+        font-size: 1em;
+        border-radius: 20px;
+        font-weight: bolder;
+    }
+    .descp button:hover{
+        color: #a790f2;
+    }
+    #b1{
+        color: #fbadaf;
+    }
+    #b1:hover{
+        color: #ff6e9f;
+    }
+    #b2{
+        color: #a4e0eb;
+    }
+    #b2:hover{
+        color: #62cdec;
+    }
+    #b3{
+        color: #fdca95;
+    }
+    #b3:hover{
+        color: #fb9124;
+    }
+
+
+    
+
+}
+
+/* -----------------------------------------------------------------ABOUT US -------------------------------------------------------------------- */
+
+
+
+
+
+html, body {
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #333;
+  background-color: #fff;
+	width: 100%;
+	max-width: 100%
+}
+
+.row{
+  margin:0;
+}
+
+.about-content, .about-panel {
+		width: 40%;
+}
+
+.container {
+  margin: 0;
+  padding: 0;
+	background-color: rgba(233, 150, 122, 0.2);
+	background-color:white;
+  overflow-y: auto;
+  height: 100vh;
+	max-width: 100%;
+}
+
+
+.about-panel {
+  padding: 0;
+  position: absolute;
+	top:0;
+	right:0;
+  -webkit-animation: example 1.2s both ease-in;
+  -moz-animation: example 1.2s both ease-in;
+  animation: example 1.2s both ease-in;
+	height: 100vh;
+
+	.photo-about{
+		position:relative;
+		top:0;
+		height: 100vh !important;
+		background-size: cover;
+		overflow: hidden
+	}
+}
+
+.about-info{
+	font-family: "Montserrat";
+  position: absolute;
+  z-index: 100100;
+  top:50%;
+  color: white;
+  text-align: center;
+  width: 100%;
+
+  .about-info-name{
+    width: 100%;
+    letter-spacing: 3px;
+    font-weight:500;
+		font-size: 2.5vw
+  }
+
+  .about-info-contact{
+    margin-top: 25px;
+    padding-bottom: 100px;
+    margin-bottom: 100px;
+    height: 130px;
+
+    h4{
+      margin-bottom: 5px;
+      font-weight:300;
+			font-size: 1.3vw
+    }
+
+    p{
+			font-size: 1.2vw;
+      font-weight: 100;
+      color:#b5b5b5;
+      margin-top: 10px;
+      margin-bottom: 0
+    }
+		
+		a {
+			margin-bottom: 5px;
+      font-weight:300;
+			font-size: 1.2vw;
+			color: light-purp;
+		}
+  }
+}
+
+.about-content{
+  float:left;
+  padding-top:30px;
+  background: white;
+  color:dark-purp;
+
+  p, blockquote{
+    font-size:13px;
+    	line-height: 20px;
+    	letter-spacing: 0.07em;
+  }
+
+  h1{
+    z-index:-1;
+    color:med-purp;
+    text-align:center;
+    line-height: 90px;
+    font-size: 90px;
+    font-weight:200;
+    letter-spacing: -0.1em;
+    width: 95%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+	.about-me{
+		/* margin: 3% ; */
+		text-align: justify;
+		font-weight: 300;
+		width: 63%;
+
+		p{
+			line-height: 23px
+		}
+		.row{
+			height:100vh
+		}
+	}
+
+}
+
+.Synopsis-highlightLine {
+    width: 52px;
+    height: 4px;
+		background: med-purp;
+    margin: 30px 0;
+}
+
+.about-content .Synopsis-highlight {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 25px;
+    width: 100%;
+		color: med-purp;
+}
+
+/* Generates animations for cascading tiles */
+.about-panel{
+  @for $i from 1 through length($moveup) {
+  $item: nth($moveup, $i);
+  height: 100%;
+
+		.about-info-contact{
+			display:block;
+			margin: 30px
+		}
+
+		.about-info-contact .#{$item} {
+			-webkit-animation-delay: #{$i * 0.08s};
+			-moz-animation-delay: #{$i * 0.08s};
+			animation-delay: #{$i * 0.08s};
+			transition-timing-function: cubic-bezier(0.42,0,0.58,1);
+			display:block;
+		}
+	}
+}
+
+.photo-about {
+  background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/283809/ballerina-826099_1920.jpg") no-repeat center center;
+  background-size: cover;
+  z-index: 45;
+
+}
+
+.hide-photo-filter {
+    position: relative;
+    top: 0;
+    background-color: rgba(255, 30, 173, 0.2);
+    z-index: 50;
+    width: 100%;
+    height: 100%;
+}

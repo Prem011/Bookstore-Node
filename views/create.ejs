@@ -1,0 +1,46 @@
+<%- include("./partials/header") %>
+<%- include("./partials/nav") %>
+
+<h1 class="text-center">Create page</h1>
+
+
+<div class="container d-flex justify-content-between w-50 py-5">
+    <form class="w-50" action="/create" method="post">
+        <div class="mb-3 ">
+          <label  class="form-label">Book name</label>
+          <input name="name" type="text" class="form-control" >
+         
+        </div>
+        <div class="mb-3">
+          <label  class="form-label">Author name</label>
+          <input name="author" type="text" class="form-control" >
+        </div>
+        <div class="mb-3">
+          <label  class="form-label">Price</label>
+          <input name="price" type="number" class="form-control" >
+        </div>
+        <div class="mb-3">
+          <label  class="form-label">Quantity</label>
+          <input name="quantity" type="number" class="form-control" >
+        </div>
+        <div class="mb-3">
+          <label  class="form-label">Category</label>
+          <input name="category" type="text" class="form-control" >
+        </div>
+        <div class="mb-3">
+          <label  class="form-label">Language</label>
+          <input name="language" type="text" class="form-control" >
+        </div>
+        <div class="mb-3">
+          <label  class="form-label">Description</label>
+          <textarea name="description" class="form-control" id="" cols="30" placeholder="enter text here" rows="10"></textarea>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Add Book</button>
+      </form>
+      <div class="img w-50 mx-5  h-50">
+        <img class="m-5" src="/images/photo-1543002588-bfa74002ed7e-removebg-preview.png" alt="">
+      </div>
+</div>
+
+<%- include("./partials/footer") %>
