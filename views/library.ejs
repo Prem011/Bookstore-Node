@@ -1,14 +1,15 @@
-<%- include("./partials/header") %>
+<div class="fullcontent-library">
+    <%- include("./partials/header") %>
 <%- include("./partials/nav") %>
 
     <!--  -->
 
     
 
-    <h1 class="text-center mt-5">Book Library</h1>
+    <h1 class="text-center mt-5 text-light">Book Library</h1>
 <!--  -->
-<div class="container mt-5 h-100">
-    <div class="d-flex flex-wrap  bg-light p-5">
+<div class=" mt-5 ">
+    <div class="d-flex flex-wrap bg-transparent p-5">
         <% books.forEach(function(book, index){ %>
         <div class="card me-3 mb-3" style="width: 18rem">
             <div class="card-body">
@@ -34,3 +35,4 @@
 
 
 <%- include("./partials/footer") %> 
+</div>

@@ -1,9 +1,10 @@
-<%- include("./partials/header") %>
+<div class="fullcontent-update">
+  <%- include("./partials/header") %>
 <%- include("./partials/nav") %>
-<h1 class="text-center">update page</h1>
-<div class="container d-flex justify-content-between w-50 py-5">
+<h1 class="text-center text-light">Update page</h1>
+<div class="">
 
-        <form class="w-50" action="/update/<%= index %>" method="post">
+        <form class="w-25" style="margin: 0 25% 0 38%;" action="/update/<%= index %>" method="post">
             <div class="mb-3 ">
               <label  class="form-label">Book name</label>
               <input name="name" type="text"  class="form-control"  value="<%= book.name %>">
@@ -30,7 +31,7 @@
               </div>
               <div class="mb-3">
                 <label  class="form-label">Description</label>
-                <textarea name="description" class="form-control" id="" cols="30" placeholder="enter text here" rows="10" ><%= book.description %></textarea>
+                <textarea name="description" class="form-control" id="" cols="30" placeholder="enter text here" rows="7" ><%= book.description %></textarea>
 
               </div>
               
@@ -40,8 +41,7 @@
            
             
 
-      <div class="img w-50 mx-5  h-50">
-        <img class="m-5" src="/images/library pic.png" alt="">
-      </div>
+      
 </div>
 <%- include("./partials/footer") %>
+</div>

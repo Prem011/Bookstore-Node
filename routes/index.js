@@ -1,7 +1,17 @@
 const { log } = require('console');
 var express = require('express');
 var router = express.Router();
-const BOOKS = [];
+const BOOKS = [
+  {
+    name : "book1",
+    author : "author1",
+    price : 20,
+    quantity : 3,
+    language : "hindi",
+    category : "novel",
+    description: "This is a good book"
+  },
+];
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
@@ -28,7 +38,7 @@ router.get('/delete/:index', function(req, res, next) {
 });
 
 router.get('/update/:index', function(req, res, next) {
-  BOOKS.push(req.body); // add the new book to
+  // BOOKS.push(req.body); // add the new book to
   const i = req.params.index;
   const b = BOOKS[i];
   res.render('update', {book : b, index : i} );
