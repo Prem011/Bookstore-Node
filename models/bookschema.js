@@ -1,14 +1,14 @@
 const mongoose = require("mongoose");
-const SqlString = require("mysql/lib/protocol/SqlString");
 
 const bookModel = new mongoose.Schema({
+    image : String,
     name : String,
     author : String,
     price : Number,
     quantity : Number,
     language : String,
     category : String,
-    description : string,
+    description : String,
         
 });
 

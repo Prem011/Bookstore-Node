@@ -4,33 +4,42 @@
 <h1 class="text-center text-light">Update page</h1>
 <div class="">
 
-        <form class="w-25" style="margin: 0 25% 0 38%;" action="/update/<%= index %>" method="post">
+        <form class="w-25" style="margin: 0 25% 0 38%;" action="/update/<%= book._id %>" method="post" enctype="multipart/form-data">
             <div class="mb-3 ">
-              <label  class="form-label">Book name</label>
+              <div class="mb-3"><img width="200" src="/images/uploads/<%=book.image%>" alt=""></div>
+
+              <input class="form-control mb-3" type="file" name="image" />
+      
+            </div>
+
+            <input type="hidden" value="<%= book.image %>" name="oldImage">
+            
+            <div class="mb-3 ">
+              <label  class="form-label text-light">Book name</label>
               <input name="name" type="text"  class="form-control"  value="<%= book.name %>">
             </div>
             <div class="mb-3">
-                <label  class="form-label">Author name</label>
+                <label  class="form-label text-light">Author name</label>
                 <input name="author" type="text" class="form-control" value="<%= book.author %>">
               </div>
               <div class="mb-3">
-                <label  class="form-label">Price</label>
+                <label  class="form-label text-light">Price</label>
                 <input name="price" type="number" class="form-control" value="<%= book.price %>">
               </div>
               <div class="mb-3">
-                <label  class="form-label">Quantity</label>
+                <label  class="form-label text-light">Quantity</label>
                 <input name="quantity" type="number" class="form-control" value="<%= book.quantity %>">
               </div>
               <div class="mb-3">
-                <label  class="form-label">Category</label>
+                <label  class="form-label text-light">Category</label>
                 <input name="category" type="text" class="form-control" value="<%= book.category %>" >
               </div>
               <div class="mb-3">
-                <label  class="form-label">Language</label>
+                <label  class="form-label text-light">Language</label>
                 <input name="language" type="text" class="form-control" value="<%= book.language %>" >
               </div>
               <div class="mb-3">
-                <label  class="form-label">Description</label>
+                <label  class="form-label text-light">Description</label>
                 <textarea name="description" class="form-control" id="" cols="30" placeholder="enter text here" rows="7" ><%= book.description %></textarea>
 
               </div>
